@@ -131,19 +131,28 @@
 				})
 			});
 		</script>		
-		
-<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB0GFyK74MgPMT1698zk9f9KtvI8N1b8Rg",
-    authDomain: "pastrana131302.firebaseapp.com",
-    databaseURL: "https://pastrana131302.firebaseio.com",
-    projectId: "pastrana131302",
-    storageBucket: "pastrana131302.appspot.com",
-    messagingSenderId: "188228487875"
-  };
-  firebase.initializeApp(config);
-</script>
+		window.fbAsyncInit = function() {
+		  FB.init({
+			appId      : '{your-app-id}',
+			cookie     : true,
+			xfbml      : true,
+			version    : '{latest-api-version}'
+		  });
+			
+		  FB.AppEvents.logPageView();   
+			
+		};
+	  
+		(function(d, s, id){
+		   var js, fjs = d.getElementsByTagName(s)[0];
+		   if (d.getElementById(id)) {return;}
+		   js = d.createElement(s); js.id = id;
+		   js.src = "https://connect.facebook.net/en_US/sdk.js";
+		   fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	  </script>	
+	
+
     </body>
 </html>
